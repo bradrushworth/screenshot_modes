@@ -1,5 +1,4 @@
-import 'package:device_preview/device_preview.dart';
-
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:screenshot_modes/screenshot_modes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData.light(),
         darkTheme: ThemeData.dark(),
-        useInheritedMediaQuery: true,
+        // useInheritedMediaQuery: true,
         navigatorKey: navigatorKey,
         locale: locale2,
         supportedLocales: [if (locale2 != null) locale2, Locale('en', 'US')],

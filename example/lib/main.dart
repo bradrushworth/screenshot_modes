@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:example/pages.dart';
 import 'package:example/simple.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ void main() {
     builder: (_) => MyApp(),
     tools: [
       ...DevicePreview.defaultTools,
-      // you only need one ethier simple way or advanced way
+      // you only need one either simple way or advanced way
       // advancedScreenShotModesPlugin,
       simpleScreenShotModesPlugin
     ],
@@ -32,5 +32,5 @@ Future<String> saveScreenShot(DeviceScreenshotWithLabel screen) async {
   final imageFile = File(path);
   await imageFile.create(recursive: true);
   await imageFile.writeAsBytes(screen.deviceScreenshot.bytes);
-  return '$path saved'; // messege printed to device preview plugins windwos;
+  return '$path saved';
 }

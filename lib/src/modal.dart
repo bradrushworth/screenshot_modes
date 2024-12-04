@@ -1,4 +1,4 @@
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 import 'core.dart';
 
@@ -12,7 +12,7 @@ class ItemScreenMode {
   const ItemScreenMode({this.function, this.modes, this.label});
 
   /// function to navigate to next screen
-  final AyncCallbackContext? function;
+  final AsyncCallbackContext? function;
 
   /// modes , used if you have nested like device frame , dark light mode before page
   final List<ItemScreenMode>? modes;

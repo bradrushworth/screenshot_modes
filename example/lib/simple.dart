@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:example/main.dart';
 import 'package:example/pages.dart';
 import 'package:screenshot_modes/screenshot_modes.dart';

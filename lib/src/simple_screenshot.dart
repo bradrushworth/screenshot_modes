@@ -1,4 +1,4 @@
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../screenshot_modes.dart';
@@ -7,24 +7,24 @@ class SimpleScreenShot extends ScreenShotModesPlugin {
   /// true if you want to take screen for light and dark mode.
   final bool useToggleDarkMode;
 
-  /// use if you have special function for settin modes, default Device_preview way
+  /// use if you have special function for setting modes, default Device_preview way
   final void Function(BuildContext) setLightMode;
 
-  /// use if you have special function for settin modes, default Device_preview way
+  /// use if you have special function for setting modes, default Device_preview way
   final void Function(BuildContext) setDarkMode;
 
-  ///  list of ItemScreenMode , represnts all your page
+  ///  list of ItemScreenMode , represents all your page
   final List<ItemScreenMode> pages;
 
-  /// list of device(frame) to take screen to it, frames set using Devices class  like taht
+  /// list of device(frame) to take screen to it, frames set using Devices class  like that
   ///   Devices.android.samsungNote10Plus.identifier,
   ///   Devices.ios.iPhone11ProMax.identifier,
   final List<DeviceIdentifier>? devices;
 
-  /// list of Locale used to take screenshot for diffrent language
+  /// list of Locale used to take screenshot for different language
   final List<Locale>? lang;
 
-  /// pass a custon logic to change language
+  /// pass a custom logic to change language
   final void Function(BuildContext, Locale lang) setLang;
 
   /// A screenshot that processes a screenshot and returns the result as a display message.
@@ -74,7 +74,7 @@ class SimpleScreenShot extends ScreenShotModesPlugin {
           ]
         : pages;
 
-    final deviesItem = devices?.map((e) {
+    final devicesItem = devices?.map((e) {
           var itemScreenMode = ItemScreenMode(
               function: (context) async =>
                   DevicePreviewHelper.changeDevice(context, e),
@@ -89,10 +89,10 @@ class SimpleScreenShot extends ScreenShotModesPlugin {
               function: (context) async =>
                   DevicePreviewHelper.setLang(context, e),
               label: e.toString(),
-              modes: deviesItem);
+              modes: devicesItem);
           return itemScreenMode;
         }).toList() ??
-        deviesItem;
+        devicesItem;
     return langItem;
   }
 }

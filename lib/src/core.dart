@@ -1,8 +1,8 @@
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
 import 'modal.dart';
 
-typedef AyncCallbackContext = Future<void> Function(BuildContext context);
+typedef AsyncCallbackContext = Future<void> Function(BuildContext context);
 
 /// A plugin for device preview that allows to capture a screenshots from the
 /// device (with its frame included)
@@ -17,7 +17,7 @@ class ScreenShotModesPlugin extends StatelessWidget {
   ///you must use to save image or uploaded to internet ...
   final ScreenshotProcessor processor;
 
-  /// list of type ItemScreenMode repersents all mode page will be taken
+  /// list of type ItemScreenMode represents all mode page will be taken
   /// function to navigate to next screen
   /// label helps with naming the image in processor
   /// modes , used if you have nested like device frame , dark light mode before page
